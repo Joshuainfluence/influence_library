@@ -1,5 +1,6 @@
-
 import 'package:flutter/material.dart';
+import 'package:influence_library/pages/book_page.dart';
+import 'package:influence_library/pages/favorites_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -9,6 +10,28 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  // this selected index is to control the bottom nav bar
+  int _selectedIndex = 0;
+
+  // this method will update the selected index
+  // when the user taps the bottom bar
+  void navigationBottomBar(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+
+
+  // pages to display
+  final List<Widget> _pages = [
+  //   book page
+    const BookPage(),
+
+    const FavoritesPage(),
+  ];
+
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -122,6 +145,7 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
       ),
+      body: _pages[_selectedIndex],
     );
   }
 }
