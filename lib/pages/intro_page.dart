@@ -7,7 +7,8 @@ class IntroPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[300],
+      // backgroundColor: Colors.grey[300],
+      backgroundColor: Colors.black38,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -17,13 +18,15 @@ class IntroPage extends StatelessWidget {
               style: TextStyle(
                 fontSize: 28,
                 fontWeight: FontWeight.bold,
-                color: Colors.black,
+                // color: Colors.black,
+                color: Colors.redAccent,
               ),
             ),
             //   logo
             Padding(
               padding: EdgeInsets.all(25),
-              child: Image.asset('lib/images/getcertified.jpg'),
+              // child: Image.asset('lib/images/getcertified.jpg'),
+              child: Image.asset('lib/images/download.jpeg'),
             ),
 
             const SizedBox(
@@ -41,7 +44,8 @@ class IntroPage extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 30),
                 child: Container(
                   decoration: BoxDecoration(
-                      color: Colors.black,
+                      // color: Colors.black,
+                      color: Colors.red,
                       borderRadius: BorderRadius.circular(12)),
                   padding: EdgeInsets.all(19),
                   child: Center(
@@ -50,7 +54,8 @@ class IntroPage extends StatelessWidget {
                       style: TextStyle(
                           fontSize: 23,
                           fontWeight: FontWeight.w700,
-                          color: Colors.white),
+                          // color: Colors.white),
+                        color: Colors.black),
                     ),
                   ),
                 ),
